@@ -20,7 +20,7 @@ if(isset($_POST['email'])){
  $username = $_POST['username'];
  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-$serverip = "localhost";
+$serverip = "162.251.80.117";
 $dbusername = "apprenti_uyanga";
 $dbpassword = "bondooloi1208/";
 $dbname = "apprenti_uyanga";
@@ -43,10 +43,8 @@ if($conn->connect_error){
   if($result->num_rows > 0){
     header("location: /register.php?error=email");
     exit();
-  } else{
-    header("Location: /");
-    exit();
-  }
+  } 
+    
 
   $sql = "SELECT * FROM `users` WHERE `username` = `$username`";
   $result = $conn->query($sql);

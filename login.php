@@ -6,7 +6,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 
     $email = $_POST['email'];
 
-    $serverip = "localhost";
+    $serverip = "162.251.80.117";
     $dbusername = "apprenti_uyanga";
     $dbpassword = "bondooloi1208/";
     $dbname = "apprenti_uyanga";
@@ -33,7 +33,7 @@ if($conn->connect_error){
       }
     //   while($row = $result->fetch_assoc()){
     //     echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " "
-  }else{
+  } else{
     header("Location: /?aldaa=num_rows");
     exit();
   }
